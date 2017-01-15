@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
 
   def index
-    @message = "Welcome Clody"
+    @message = "Welcome user"
   end
 end
