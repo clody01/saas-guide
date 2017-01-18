@@ -39,7 +39,11 @@ gem 'rails_12factor', group: :production
 
 gem 'devise'
 
-gem  'awesome_print'
+gem 'awesome_print'
+
+gem 'bootstrap-sass', '~> 3.3.6'
+
+gem 'simple_form'
 
 ####################################################################
 group :development, :test do
