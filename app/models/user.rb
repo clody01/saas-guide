@@ -7,9 +7,9 @@ class User < ApplicationRecord
   validate :email_is_unique, on: :create
   after_create :create_account
 
-  #def confirmation_required?
-    #false
-  #end
+  def confirmation_required?
+    false
+  end
 
 
 
@@ -19,7 +19,7 @@ class User < ApplicationRecord
     #logger.debug "################## dans la fonction email_is_unique ################# "
     return false unless self.errors[:email].empty?
     unless Account.find_by_email(email).nil?
-      errors.add(:email, " already exist ")
+      errors.add(:email, " already exist in the database")
     end
   end
 
